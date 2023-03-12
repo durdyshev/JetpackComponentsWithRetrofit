@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="selectedPhoto"
+            type="com.example.jetpackcomponentswithretrofit.model.PhotoData" />
+    </data>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/fragment_details_imageview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:imageFromUrl="@{selectedPhoto.thumbnailUrl}"
+        android:layout_weight="1"
+        android:padding="10dp"/>
+    <TextView
+        android:id="@+id/fragment_details_tv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center|top"
+        android:text="@{selectedPhoto.title}"/>
+
+
+</LinearLayout>
+</layout>

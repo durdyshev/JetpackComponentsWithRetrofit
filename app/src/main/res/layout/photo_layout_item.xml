@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="photo"
+            type="com.example.jetpackcomponentswithretrofit.model.PhotoData" />
+    </data>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginBottom="5dp">
+
+    <TextView
+        android:id="@+id/photo_layout_item_tv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.58"
+        android:gravity="center"
+        android:text="@{photo.title}"
+        />
+
+    <ImageView
+        android:layout_weight="1"
+        android:layout_gravity="end"
+        android:id="@+id/photo_layout_item_img"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:padding="5dp"
+        android:imageFromUrl="@{photo.thumbnailUrl}"/>
+</LinearLayout>
+</layout>
